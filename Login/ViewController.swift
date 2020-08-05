@@ -64,6 +64,8 @@ class ViewController: UIViewController {
     
     @IBAction func signUpButtonClicked(_ sender: UIButton) {
         
+        //TODO:- chick locally the validity of signup parameters
+        
         guard let name = userNameTextField.text else{
             print("empty name")
             return
@@ -86,7 +88,7 @@ class ViewController: UIViewController {
                
         
         
-        
+        //TODO:- generate device token and pass it
         let mobileToken = "57246542-96fe-1a63-e053-0824d011072a"
         
         
@@ -103,10 +105,14 @@ class ViewController: UIViewController {
             //print("response in vc --> \(response)")
                       print("token => \(response?.token)")
                       print("email => \(response?.user?.email)")
+                    //TODO:- dismiss viewcontroller
 
                     case .failure(let error):
                       print(error.localizedDescription)
                     print("something went wrong")
+                   //TODO:- show users errors in there paramters
+                    
+                
                   }
               }
     }
