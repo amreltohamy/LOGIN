@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,13 @@
 		FA16D4B724D7D62300A49654 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA16D4B524D7D62300A49654 /* Main.storyboard */; };
 		FA16D4B924D7D62500A49654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA16D4B824D7D62500A49654 /* Assets.xcassets */; };
 		FA16D4BC24D7D62500A49654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA16D4BA24D7D62500A49654 /* LaunchScreen.storyboard */; };
+		FAB6956B24D8E16F0067425A /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6956A24D8E16F0067425A /* TargetType.swift */; };
+		FAB6956D24D8E2870067425A /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6956C24D8E2870067425A /* BaseAPI.swift */; };
+		FAB6956F24D8E2C30067425A /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6956E24D8E2C30067425A /* BaseResponse.swift */; };
+		FAB6957124D8E3070067425A /* LogNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6957024D8E3070067425A /* LogNetworking.swift */; };
+		FAB6957324D8E3750067425A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6957224D8E3750067425A /* Constants.swift */; };
+		FAB6957524D8EDFE0067425A /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6957424D8EDFE0067425A /* LoginModel.swift */; };
+		FAB6957724D8EE750067425A /* LogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6957624D8EE750067425A /* LogAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +35,13 @@
 		FA16D4B824D7D62500A49654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA16D4BB24D7D62500A49654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA16D4BD24D7D62500A49654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAB6956A24D8E16F0067425A /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		FAB6956C24D8E2870067425A /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
+		FAB6956E24D8E2C30067425A /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
+		FAB6957024D8E3070067425A /* LogNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogNetworking.swift; sourceTree = "<group>"; };
+		FAB6957224D8E3750067425A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FAB6957424D8EDFE0067425A /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		FAB6957624D8EE750067425A /* LogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +62,6 @@
 				5EBEBD601FDE77E20CBA77C6 /* Pods-Login.debug.xcconfig */,
 				BD372DAC3913EF69A046639A /* Pods-Login.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +94,9 @@
 		FA16D4AE24D7D62300A49654 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				FAB6956724D8E0BC0067425A /* Models */,
+				FAB6956924D8E1390067425A /* Base */,
+				FAB6956824D8E0F30067425A /* Log */,
 				FA16D4AF24D7D62300A49654 /* AppDelegate.swift */,
 				FA16D4B124D7D62300A49654 /* SceneDelegate.swift */,
 				FA16D4B324D7D62300A49654 /* ViewController.swift */,
@@ -88,8 +104,36 @@
 				FA16D4B824D7D62500A49654 /* Assets.xcassets */,
 				FA16D4BA24D7D62500A49654 /* LaunchScreen.storyboard */,
 				FA16D4BD24D7D62500A49654 /* Info.plist */,
+				FAB6957224D8E3750067425A /* Constants.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		FAB6956724D8E0BC0067425A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAB6957424D8EDFE0067425A /* LoginModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAB6956824D8E0F30067425A /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				FAB6957024D8E3070067425A /* LogNetworking.swift */,
+				FAB6957624D8EE750067425A /* LogAPI.swift */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		FAB6956924D8E1390067425A /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FAB6956A24D8E16F0067425A /* TargetType.swift */,
+				FAB6956C24D8E2870067425A /* BaseAPI.swift */,
+				FAB6956E24D8E2C30067425A /* BaseResponse.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,9 +251,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB6956B24D8E16F0067425A /* TargetType.swift in Sources */,
 				FA16D4B424D7D62300A49654 /* ViewController.swift in Sources */,
 				FA16D4B024D7D62300A49654 /* AppDelegate.swift in Sources */,
+				FAB6956F24D8E2C30067425A /* BaseResponse.swift in Sources */,
+				FAB6957524D8EDFE0067425A /* LoginModel.swift in Sources */,
 				FA16D4B224D7D62300A49654 /* SceneDelegate.swift in Sources */,
+				FAB6956D24D8E2870067425A /* BaseAPI.swift in Sources */,
+				FAB6957124D8E3070067425A /* LogNetworking.swift in Sources */,
+				FAB6957324D8E3750067425A /* Constants.swift in Sources */,
+				FAB6957724D8EE750067425A /* LogAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
