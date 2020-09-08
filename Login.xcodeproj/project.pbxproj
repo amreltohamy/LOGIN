@@ -14,6 +14,7 @@
 		FA16D4B724D7D62300A49654 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA16D4B524D7D62300A49654 /* Main.storyboard */; };
 		FA16D4B924D7D62500A49654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA16D4B824D7D62500A49654 /* Assets.xcassets */; };
 		FA16D4BC24D7D62500A49654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA16D4BA24D7D62500A49654 /* LaunchScreen.storyboard */; };
+		FA6149222507122100C4A78A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6149212507122100C4A78A /* LoginViewController.swift */; };
 		FAB6956B24D8E16F0067425A /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6956A24D8E16F0067425A /* TargetType.swift */; };
 		FAB6956D24D8E2870067425A /* BaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6956C24D8E2870067425A /* BaseAPI.swift */; };
 		FAB6956F24D8E2C30067425A /* BaseResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB6956E24D8E2C30067425A /* BaseResponse.swift */; };
@@ -35,6 +36,7 @@
 		FA16D4B824D7D62500A49654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA16D4BB24D7D62500A49654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA16D4BD24D7D62500A49654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA6149212507122100C4A78A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		FAB6956A24D8E16F0067425A /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
 		FAB6956C24D8E2870067425A /* BaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAPI.swift; sourceTree = "<group>"; };
 		FAB6956E24D8E2C30067425A /* BaseResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponse.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 				FA16D4AF24D7D62300A49654 /* AppDelegate.swift */,
 				FA16D4B124D7D62300A49654 /* SceneDelegate.swift */,
 				FA16D4B324D7D62300A49654 /* ViewController.swift */,
+				FA6149212507122100C4A78A /* LoginViewController.swift */,
 				FA16D4B524D7D62300A49654 /* Main.storyboard */,
 				FA16D4B824D7D62500A49654 /* Assets.xcassets */,
 				FA16D4BA24D7D62500A49654 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				FAB6957124D8E3070067425A /* LogNetworking.swift in Sources */,
 				FAB6957324D8E3750067425A /* Constants.swift in Sources */,
 				FAB6957724D8EE750067425A /* LogAPI.swift in Sources */,
+				FA6149222507122100C4A78A /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

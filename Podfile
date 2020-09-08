@@ -7,4 +7,6 @@ target 'Login' do
 
   # Pods for Login
 pod 'Alamofire', '~> 5.2'
+pod 'SwiftKeychainWrapper'
+
 end

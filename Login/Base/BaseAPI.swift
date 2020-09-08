@@ -28,10 +28,12 @@ class BaseAPI <T:TargetType> {
         let method = Alamofire.HTTPMethod(rawValue: target.methodes.rawValue)
         let headers = Alamofire.HTTPHeaders(target.headers ?? [:])
         let parameters =  buildParameters(task: target.task)
-        
+        print(method)
+        print(headers)
+        print("parameters\(parameters)")
         // starting the task
         AF.request(target.baseURL + target.path , method: method , parameters: parameters.0 ,encoding: parameters.1 , headers: headers).responseJSON { (response) in
-          //  print(response)
+            print(response)
             guard let statusCode = response.response?.statusCode
                 else {
                     let error = NSError(domain: target.baseURL, code: 0, userInfo: [NSLocalizedDescriptionKey : ErrorMessage.genericError])

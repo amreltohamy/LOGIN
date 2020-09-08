@@ -7,11 +7,11 @@
 //
 
 import UIKit
-
+import SwiftKeychainWrapper
 
 class ViewController: UIViewController {
     
-    public var devToken:String?
+   
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var UserEmailTextField: UITextField!
     @IBOutlet weak var PasswordTextField: UITextField!
@@ -96,12 +96,12 @@ class ViewController: UIViewController {
             return
         }
         
-        guard devToken != nil else{
-            print("device token is empty")
-            return
-        }
         
         //TODO:- generate device token and pass it
+        guard let devToken = UIDevice.current.identifierForVendor?.uuidString else{return}
+           
+        
+        
         
         
         
@@ -112,13 +112,21 @@ class ViewController: UIViewController {
                      email: email,
                      password: password,
                      passwordConfirm: passwordConfirmation,
-                     mobileToken: devToken!) { (result) in
+                     mobileToken: devToken) { (result) in
                         //   print(result)
                         switch result {
                         case .success(let response):
                             //print("response in vc --> \(response)")
-                            print("token => \(response?.token)")
-                            print("email => \(response?.user?.email)")
+                           
+                            guard let accessToken = response?.token else{return}
+                            print(accessToken)
+                            let saveAccessTokenSuccessful: Bool = KeychainWrapper.standard.set(accessToken, forKey: "accessToken")
+                            print("is access token saved \(saveAccessTokenSuccessful)")
+                           
+                            guard let email = response?.user?.email else{return}
+                            print(email)
+                            let saveEmailSuccessful: Bool = KeychainWrapper.standard.set(email, forKey: "email")
+                            print("is email saved \(saveEmailSuccessful)")
                             //TODO:- dismiss viewcontroller
                             
                         case .failure(let error):
@@ -135,4 +143,3 @@ class ViewController: UIViewController {
     
     
 }
-

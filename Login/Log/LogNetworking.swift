@@ -12,7 +12,7 @@ import Alamofire
 
 enum LogNetworking {
     
-    case login (email:String , password:String , mobileToken :String , Authorization :String)
+    case login (email:String , password:String ,mobile_token:String, Authorization :String)
     case register(name:String ,email:String , password:String , password_confirmation :String , mobile_token :String )
       
 }
@@ -57,11 +57,10 @@ extension LogNetworking : TargetType {
             
         case .login ( email:let email
             ,password:let password
-            ,mobileToken : let mobileToken
+            ,mobile_token:let mobile_token
             ,Authorization: _ ):
             return .requestParameters(parameters: ["email": email,
-                                                   "password": password,
-                                                   "mobile_token": mobileToken], encoding: JSONEncoding.default)
+                                                   "password": password,"mobile_token":mobile_token], encoding: JSONEncoding.default)
             
             
             
@@ -85,9 +84,9 @@ extension LogNetworking : TargetType {
     var headers: [String : String]? {
         switch self {
         case .login ( email:_
-        ,password:_
-        ,mobileToken : _
-        ,Authorization: let bearer ):
+            ,password:_
+            ,mobile_token:_
+            ,Authorization: let bearer ):
             return ["Content-Type":"application/json" , "Authorization" : bearer]
         case .register :
             return ["Content-Type":"application/json"]
